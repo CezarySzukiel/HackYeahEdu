@@ -49,7 +49,7 @@ INSTALLED_APPS = [
 
     'users.apps.UsersConfig',
     'api.apps.ApiConfig',
-    # 'student_exercises.apps.StudentExercisesConfig',
+    'class_group_management.apps.ClassGroupManagementConfig',
 ]
 
 MIDDLEWARE = [
@@ -144,7 +144,7 @@ AUTH_USER_MODEL = 'users.CustomUser'
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         # 'rest_framework.permissions.IsAuthenticated',
-        # 'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.AllowAny',
     ],
 
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
@@ -164,7 +164,6 @@ REST_AUTH = {
     'JWT_AUTH_REFRESH_COOKIE': 'my-refresh-token',
     'LOGOUT_ON_PASSWORD_CHANGE': True,
     'PASSWORD_CHANGE_SERIALIZER': 'dj_rest_auth.serializers.PasswordChangeSerializer',
-    # 'USER_DETAILS_SERIALIZER': 'dj_rest_auth.serializers.UserDetailsSerializer',
     'USER_DETAILS_SERIALIZER': 'users.serializers.CustomUserDetailsSerializer',
 }
 

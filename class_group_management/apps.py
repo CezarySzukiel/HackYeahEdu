@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class StudnentExercisesConfig(AppConfig):
+class ClassGroupManagementConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'studnent_exercises'
+    name = 'class_group_management'

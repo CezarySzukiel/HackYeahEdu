@@ -49,7 +49,7 @@ INSTALLED_APPS = [
 
     'users.apps.UsersConfig',
     'api.apps.ApiConfig',
-    'student_exercises.apps.StudentExercisesConfig',
+    # 'student_exercises.apps.StudentExercisesConfig',
 ]
 
 MIDDLEWARE = [

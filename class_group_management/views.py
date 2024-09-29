@@ -1,3 +1,5 @@
+import os
+
 from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 
@@ -9,7 +11,7 @@ from .models import Homework, ClassGroup
 from .serializers import HomeworkSerializer, ClassGroupSerializer
 
 client = OpenAI(
-    api_key="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",
+    api_key=os.environ.get("OPENAI_API_KEY"),
 )
 
 

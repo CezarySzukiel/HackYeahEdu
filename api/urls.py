@@ -15,7 +15,6 @@ urlpatterns = [
     path('account-confirm-email/<str:key>/', ConfirmEmailView.as_view()),
     re_path(r'^account-confirm-email/(?P<key>[-:\w]+)/$', VerifyEmailView.as_view(), name='account_confirm_email'),
     path("password/reset/confirm/<str:uidb64>/<str:token>/", views.password_reset_confirm_redirect,
-         name="password_reset_confirm",
-         # potrzebne do redirecta po resecie hasła
-         ),
+         name="password_reset_confirm",),
+    path('class-group-management/', include('class_group_management.urls')),
 ]

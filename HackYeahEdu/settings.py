@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'dj_rest_auth.registration',
     'allauth.socialaccount',
+    'drf_yasg',
 
     'users.apps.UsersConfig',
     'api.apps.ApiConfig',
@@ -187,8 +188,6 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
-
-
 
 # redirect after success confirm email link
 LOGIN_URL = 'http://localhost:8080/login'
